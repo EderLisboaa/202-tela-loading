@@ -1,0 +1,65 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: darkgrey;
+    
+}
+
+body>div{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+body>div>div{
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+div>div>div{
+    width: 0px;
+    height: 50px;
+    background-color: green;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    /* animation-iteration-count: infinite; */
+    animation-name: carregar;
+}
+body button{
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    animation-timing-function: cubic-bezier(1,-0.5,.78,1.63) ;
+    animation-duration: 10s;
+    animation-name: carregado;
+}
+
+body button:hover{
+    cursor: pointer;
+}
+
+
+@keyframes carregar{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 400px;
+    }
+}
+
+@keyframes carregado{
+    0%{
+        transform: translateY(-1000px)
+    }
+    100%{
+        transform: translateY(0px)
+    }
+}
